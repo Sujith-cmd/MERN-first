@@ -10,3 +10,4 @@ app.use('/api/users', userRouter)
 app.get('/', (req,res) => res.send('server is ready'));
     
 app.listen(port, () => console.log(`Server started on port ${port}`));
+// sujith
