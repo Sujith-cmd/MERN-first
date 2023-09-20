@@ -20,6 +20,7 @@ const authUser = asyncHandler(async (req,res) => {
 
 // route POST2 /api/users      register a new user
 const registerUser = asyncHandler(async (req,res) => {
+    console.log(req.body);
     const {name, email, password} = req.body;
     const userExists = await User.findOne({email: email})
     if(userExists) {
@@ -40,8 +41,8 @@ const registerUser = asyncHandler(async (req,res) => {
         })
      }else{
         res.status(400);
-        throw new Error('Invalid user data')
-     }
+        throw new Error('Invalid user data');
+     };
    
 })
 
